@@ -4,155 +4,249 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Varun Teja | Marketing Strategist</title>
+<title>Varun Teja | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
-color:white;
-overflow-x:hidden;
+    background:#fff;
+    color:#222;
 }
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:white;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ff6b00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff6b00;
+}
+
+/* Hero */
 
 .hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-position:relative;
-overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 10%;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-width:800px;
-height:800px;
-background:linear-gradient(45deg,#00f5ff,#7c3aed);
-border-radius:50%;
-filter:blur(180px);
-animation:move 10s infinite alternate;
-opacity:.5;
+.hero-content{
+    max-width:700px;
 }
 
-@keyframes move{
-0%{
-transform:translate(-200px,-150px);
-}
-100%{
-transform:translate(200px,150px);
-}
+.hero h1{
+    font-size:65px;
+    color:#ff6b00;
 }
 
-.content{
-position:relative;
-z-index:2;
+.hero h2{
+    font-size:28px;
+    margin:10px 0;
 }
 
-.content h1{
-font-size:4rem;
-font-weight:700;
-margin-bottom:10px;
-}
-
-.highlight{
-background:linear-gradient(90deg,#00f5ff,#7c3aed);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.typing{
-font-size:1.5rem;
-margin-bottom:25px;
-color:#cbd5e1;
-}
-
-.btns{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+.hero p{
+    line-height:1.8;
+    margin:20px 0;
 }
 
 .btn{
-padding:14px 32px;
-border:none;
-border-radius:50px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-transition:.4s;
-text-decoration:none;
+    display:inline-block;
+    padding:14px 30px;
+    background:#ff6b00;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.4s;
 }
 
-.primary{
-background:linear-gradient(90deg,#00f5ff,#7c3aed);
-color:white;
+.btn:hover{
+    transform:translateY(-5px);
 }
 
-.primary:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 35px rgba(124,58,237,.4);
+/* Section */
+
+section{
+    padding:100px 10%;
 }
 
-.secondary{
-border:2px solid #00f5ff;
-color:#00f5ff;
-background:transparent;
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#ff6b00;
+    margin-bottom:50px;
 }
 
-.secondary:hover{
-background:#00f5ff;
-color:#0f172a;
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-.stats{
-display:flex;
-justify-content:center;
-gap:50px;
-margin-top:50px;
-flex-wrap:wrap;
+.skill{
+    background:#fff7f0;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 }
 
-.card{
-background:rgba(255,255,255,.05);
-padding:25px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-transition:.4s;
-min-width:180px;
+.skill h3{
+    margin-bottom:10px;
 }
 
-.card:hover{
-transform:translateY(-10px);
+.bar{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:50px;
+    overflow:hidden;
 }
 
-.card h2{
-font-size:2rem;
-color:#00f5ff;
+.progress{
+    height:100%;
+    background:#ff6b00;
+    border-radius:50px;
 }
 
-.card p{
-color:#cbd5e1;
+/* Experience */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:4px;
+    background:#ff6b00;
+    top:0;
+    bottom:0;
+    left:50%;
+}
+
+.container{
+    padding:10px 40px;
+    position:relative;
+    width:50%;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    left:50%;
+}
+
+.content{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.content h3{
+    color:#ff6b00;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+}
+
+footer{
+    background:#ff6b00;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 @media(max-width:768px){
-.content h1{
-font-size:2.5rem;
+
+.hero h1{
+    font-size:42px;
 }
-.typing{
-font-size:1.1rem;
+
+.timeline::after{
+    left:20px;
+}
+
+.container{
+    width:100%;
+    padding-left:60px;
+    padding-right:20px;
+}
+
+.right{
+    left:0;
 }
 }
 
@@ -161,43 +255,191 @@ font-size:1.1rem;
 
 <body>
 
-<section class="hero">
+<nav>
+<div class="logo">VARUN</div>
 
-<div class="content">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-<h1>Hi, I'm <span class="highlight">Varun Teja</span></h1>
+<!-- HERO -->
 
-<p class="typing">
-Marketing Strategist • Agency Leader • Performance Ads Expert
+<section class="hero" id="home">
+
+<div class="hero-content hidden">
+
+<h1>VARUN TEJA</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Results-driven professional experienced in Marketing Operations,
+Performance Advertising, Team Leadership and Business Growth.
+Focused on creating impactful strategies and delivering measurable results.
 </p>
 
-<div class="btns">
-<a href="#contact" class="btn primary">Hire Me</a>
-<a href="#projects" class="btn secondary">View Work</a>
+<a href="#contact" class="btn">Contact Me</a>
+
 </div>
 
-<div class="stats">
+</section>
 
-<div class="card">
-<h2>3+</h2>
-<p>Years Leadership</p>
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title hidden">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill hidden">
+<h3>Graphic Design</h3>
+<div class="bar">
+<div class="progress" style="width:90%"></div>
+</div>
 </div>
 
-<div class="card">
-<h2>50+</h2>
-<p>Campaigns Managed</p>
+<div class="skill hidden">
+<h3>Client Acquisition</h3>
+<div class="bar">
+<div class="progress" style="width:85%"></div>
+</div>
 </div>
 
-<div class="card">
-<h2>100%</h2>
-<p>Client Focused</p>
+<div class="skill hidden">
+<h3>Negotiation</h3>
+<div class="bar">
+<div class="progress" style="width:88%"></div>
+</div>
 </div>
 
+<div class="skill hidden">
+<h3>Marketing Operations</h3>
+<div class="bar">
+<div class="progress" style="width:92%"></div>
+</div>
 </div>
 
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2 class="section-title hidden">Experience</h2>
+
+<div class="timeline">
+
+<div class="container left hidden">
+<div class="content">
+<h3>Kavora Tech Groups</h3>
+<p>Head of Agency (2026 - Present)</p>
+</div>
+</div>
+
+<div class="container right hidden">
+<div class="content">
+<h3>DION GROUPS</h3>
+<p>Head of Marketing Agency Operations</p>
+</div>
+</div>
+
+<div class="container left hidden">
+<div class="content">
+<h3>IEEE Circuits & Systems Society</h3>
+<p>Event Coordinator</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="section-title hidden">Contact</h2>
+
+<div class="hidden">
+<p>📧 tejavarun172@gmail.com</p>
+<p>📞 +91 89770 30956</p>
+<p>📍 Bengaluru, India</p>
+
+<a href="https://linkedin.com" class="btn">
+LinkedIn Profile
+</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Varun Teja | All Rights Reserved
+</footer>
+
+<script>
+
+/* Typing Effect */
+
+const text =
+["Marketing Leader",
+"Performance Marketer",
+"Agency Head",
+"Business Strategist"];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById("typing").textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
+
+setTimeout(type,1200);
+}
+else{
+setTimeout(type,100);
+}
+
+})();
+
+/* Scroll Animation */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+document.querySelectorAll('.hidden').forEach((el)=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>
