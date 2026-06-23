@@ -24,101 +24,6 @@ html{
 body{
     background:#fff;
     color:#222;
-    overflow-x:hidden;
-}
-
-/* Animated Background */
-
-.background-animation{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    overflow:hidden;
-}
-
-.background-animation span{
-    position:absolute;
-    display:block;
-    border-radius:50%;
-    background:rgba(255,107,0,0.12);
-    bottom:-150px;
-    animation:animate 25s linear infinite;
-}
-
-.background-animation span:nth-child(1){
-    left:5%;
-    width:80px;
-    height:80px;
-    animation-duration:18s;
-}
-
-.background-animation span:nth-child(2){
-    left:20%;
-    width:120px;
-    height:120px;
-    animation-duration:22s;
-}
-
-.background-animation span:nth-child(3){
-    left:35%;
-    width:60px;
-    height:60px;
-    animation-duration:15s;
-}
-
-.background-animation span:nth-child(4){
-    left:50%;
-    width:150px;
-    height:150px;
-    animation-duration:26s;
-}
-
-.background-animation span:nth-child(5){
-    left:65%;
-    width:90px;
-    height:90px;
-    animation-duration:20s;
-}
-
-.background-animation span:nth-child(6){
-    left:80%;
-    width:130px;
-    height:130px;
-    animation-duration:24s;
-}
-
-.background-animation span:nth-child(7){
-    left:45%;
-    width:70px;
-    height:70px;
-    animation-duration:17s;
-}
-
-.background-animation span:nth-child(8){
-    left:90%;
-    width:100px;
-    height:100px;
-    animation-duration:28s;
-}
-
-@keyframes animate{
-    0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:0;
-    }
-    10%{
-        opacity:1;
-    }
-    90%{
-        opacity:1;
-    }
-    100%{
-        transform:translateY(-1200px) rotate(720deg);
-        opacity:0;
-    }
 }
 
 /* Navbar */
@@ -133,7 +38,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
 }
 
 .logo{
@@ -169,49 +74,43 @@ nav ul li a:hover{
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
     padding:0 10%;
-    background:
-    radial-gradient(circle at top right,
-    rgba(255,107,0,0.18),
-    transparent 35%);
 }
 
 .hero-content{
-    max-width:800px;
+    max-width:700px;
 }
 
 .hero h1{
-    font-size:70px;
+    font-size:65px;
     color:#ff6b00;
 }
 
 .hero h2{
-    font-size:30px;
-    margin-top:10px;
+    font-size:28px;
+    margin:10px 0;
 }
 
 .hero p{
-    margin-top:20px;
     line-height:1.8;
+    margin:20px 0;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:14px 32px;
+    padding:14px 30px;
     background:#ff6b00;
     color:white;
     text-decoration:none;
     border-radius:50px;
     transition:.4s;
-    box-shadow:0 0 20px rgba(255,107,0,.4);
 }
 
 .btn:hover{
     transform:translateY(-5px);
-    box-shadow:0 0 35px rgba(255,107,0,.7);
 }
+
+/* Section */
 
 section{
     padding:100px 10%;
@@ -219,7 +118,7 @@ section{
 
 .section-title{
     text-align:center;
-    font-size:42px;
+    font-size:40px;
     color:#ff6b00;
     margin-bottom:50px;
 }
@@ -239,21 +138,25 @@ section{
     box-shadow:0 5px 15px rgba(0,0,0,.05);
 }
 
+.skill h3{
+    margin-bottom:10px;
+}
+
 .bar{
     width:100%;
     height:10px;
     background:#ddd;
     border-radius:50px;
     overflow:hidden;
-    margin-top:10px;
 }
 
 .progress{
     height:100%;
     background:#ff6b00;
+    border-radius:50px;
 }
 
-/* Timeline */
+/* Experience */
 
 .timeline{
     position:relative;
@@ -303,10 +206,8 @@ section{
 }
 
 .contact p{
-    margin:12px 0;
+    margin:15px 0;
 }
-
-/* Footer */
 
 footer{
     background:#ff6b00;
@@ -315,12 +216,12 @@ footer{
     padding:20px;
 }
 
-/* Scroll Animation */
+/* Animation */
 
 .hidden{
     opacity:0;
     transform:translateY(50px);
-    transition:all 1s ease;
+    transition:all 1s;
 }
 
 .show{
@@ -328,42 +229,10 @@ footer{
     transform:translateY(0);
 }
 
-/* WhatsApp Button */
-
-.whatsapp-float{
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:30px;
-    right:30px;
-    background:#ff6b00;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    text-decoration:none;
-    box-shadow:0 0 20px rgba(255,107,0,.5);
-    animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
-    100%{transform:scale(1);}
-}
-
-/* Mobile */
-
 @media(max-width:768px){
 
 .hero h1{
     font-size:42px;
-}
-
-.hero h2{
-    font-size:22px;
 }
 
 .timeline::after{
@@ -379,31 +248,12 @@ footer{
 .right{
     left:0;
 }
-
-nav{
-    flex-direction:column;
-}
-
-nav ul{
-    margin-top:10px;
-}
 }
 
 </style>
 </head>
 
 <body>
-
-<div class="background-animation">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
 
 <nav>
 <div class="logo">VARUN</div>
@@ -416,7 +266,10 @@ nav ul{
 </ul>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
+
 <div class="hero-content hidden">
 
 <h1>VARUN TEJA</h1>
@@ -424,13 +277,18 @@ nav ul{
 <h2 id="typing"></h2>
 
 <p>
-Agency Head, Graphic Designer and Marketing Strategist focused on building brands, driving growth and creating impactful digital experiences.
+Results-driven professional experienced in Marketing Operations,
+Performance Advertising, Team Leadership and Business Growth.
+Focused on creating impactful strategies and delivering measurable results.
 </p>
 
 <a href="#contact" class="btn">Contact Me</a>
 
 </div>
+
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
@@ -440,27 +298,37 @@ Agency Head, Graphic Designer and Marketing Strategist focused on building brand
 
 <div class="skill hidden">
 <h3>Graphic Design</h3>
-<div class="bar"><div class="progress" style="width:95%"></div></div>
+<div class="bar">
+<div class="progress" style="width:90%"></div>
+</div>
 </div>
 
 <div class="skill hidden">
 <h3>Client Acquisition</h3>
-<div class="bar"><div class="progress" style="width:90%"></div></div>
+<div class="bar">
+<div class="progress" style="width:85%"></div>
+</div>
 </div>
 
 <div class="skill hidden">
-<h3>Negotiation Skills</h3>
-<div class="bar"><div class="progress" style="width:88%"></div></div>
+<h3>Negotiation</h3>
+<div class="bar">
+<div class="progress" style="width:88%"></div>
+</div>
 </div>
 
 <div class="skill hidden">
 <h3>Marketing Operations</h3>
-<div class="bar"><div class="progress" style="width:92%"></div></div>
+<div class="bar">
+<div class="progress" style="width:92%"></div>
+</div>
 </div>
 
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
 
@@ -471,14 +339,14 @@ Agency Head, Graphic Designer and Marketing Strategist focused on building brand
 <div class="container left hidden">
 <div class="content">
 <h3>Kavora Tech Groups</h3>
-<p>Head of Agency & Graphic Designer (2026 - Present)</p>
+<p>Head of Agency & graphic designer(2026 - Present)</p>
 </div>
 </div>
 
 <div class="container right hidden">
 <div class="content">
 <h3>DION GROUPS</h3>
-<p>Head of Agency & Graphic Designer</p>
+<p>Head of Agency & graphic designer </p>
 </div>
 </div>
 
@@ -492,6 +360,8 @@ Agency Head, Graphic Designer and Marketing Strategist focused on building brand
 </div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -513,23 +383,19 @@ LinkedIn Profile
 © 2026 Varun Teja | All Rights Reserved
 </footer>
 
-<a href="https://wa.me/918977030956"
-class="whatsapp-float"
-target="_blank">💬</a>
-
 <script>
 
 /* Typing Effect */
 
-const text = [
+const text =
+["Marketing Leader",
 "Agency Head",
-"Graphic Designer",
-"Marketing Strategist",
-"Business Leader"
-];
+"Business Strategist"];
 
 let count = 0;
 let index = 0;
+let currentText = "";
+let letter = "";
 
 (function type(){
 
@@ -537,14 +403,15 @@ if(count === text.length){
 count = 0;
 }
 
-let currentText = text[count];
-let letter = currentText.slice(0, ++index);
+currentText = text[count];
+letter = currentText.slice(0, ++index);
 
 document.getElementById("typing").textContent = letter;
 
 if(letter.length === currentText.length){
 count++;
 index = 0;
+
 setTimeout(type,1200);
 }
 else{
@@ -556,14 +423,18 @@ setTimeout(type,100);
 /* Scroll Animation */
 
 const observer = new IntersectionObserver((entries)=>{
+
 entries.forEach((entry)=>{
+
 if(entry.isIntersecting){
-entry.target.classList.add("show");
+entry.target.classList.add('show');
 }
-});
+
 });
 
-document.querySelectorAll(".hidden").forEach((el)=>{
+});
+
+document.querySelectorAll('.hidden').forEach((el)=>{
 observer.observe(el);
 });
 
